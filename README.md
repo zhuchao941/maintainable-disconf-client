@@ -90,6 +90,23 @@
    });
     ```
 
+## 配置项
+
+下表列的是disconf.properties里支持的配置项，-D参数优先级更高
+
+| 配置名 | 配置内容 | 默认值 |
+| --- | --- | --- |
+| disconf.conf_server_host | disconf-web端的地址 | 无 |
+| disconf.enable.remote.conf | 是否开启远程模式（是否会下载文件） | true（开启） |
+| disconf.user_define_download_dir | 配置文件下载到本地的目录 | ./src/main/resources/config |
+| disconf.common_app_conf_files_name | 公共配置文件名 | 无 |
+| project.name | 应用名称，用来替换原来disconf.app | 无 |
+| disconf.version | 配置版本号 | 无 |
+
+定位一个disconf配置文件需要有app、version以及env三个坐标，前两个已经在上面的配置里有写了。而env的话，直接从Spring Boot启动参数的`--spring.profiles.active=`获取
+
+需要注意的是，公共配置的app为`common`，version及env与主项目保持一致。
+
 ## 扩展点
 
 1. com.github.zhuchao941.disconf.client.resolver.DisconfAppPropResolver
