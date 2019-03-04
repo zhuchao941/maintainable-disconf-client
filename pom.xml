@@ -4,16 +4,28 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dianwoba.wireless</groupId>
-    <artifactId>wireless-disconf-client</artifactId>
+    <groupId>com.github.zhcuhao941</groupId>
+    <artifactId>maintainable-disconf-client</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.17.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
     </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>1.5.17.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <properties>
         <java.version>1.8</java.version>
@@ -22,6 +34,8 @@
         <commons-lang.version>3.7</commons-lang.version>
         <commons-collections.version>4.1</commons-collections.version>
         <okhttp.version>3.13.1</okhttp.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -78,4 +92,27 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <tag>master</tag>
+        <url>git@github.com:zhuchao941/maintainable-disconf-client.git</url>
+        <connection>scm:git:git@github.com:zhuchao941/maintainable-disconf-client.git</connection>
+        <developerConnection>scm:git:git@github.com:zhuchao941/maintainable-disconf-client.git
+        </developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <name>zhuchao</name>
+            <email>339357762@qq.com</email>
+            <organization>dianwoba</organization>
+        </developer>
+    </developers>
 </project>
