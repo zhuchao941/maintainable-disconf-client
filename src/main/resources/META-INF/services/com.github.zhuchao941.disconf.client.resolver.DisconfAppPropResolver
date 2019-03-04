@@ -1,0 +1,2 @@
+com.github.zhuchao941.disconf.client.resolver.AppCommonPropResolver
+com.github.zhuchao941.disconf.client.resolver.AppSpecificPropResolver
