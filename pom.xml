@@ -4,7 +4,7 @@
 
     <groupId>com.github.zhuchao941</groupId>
     <artifactId>maintainable-disconf-client</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
