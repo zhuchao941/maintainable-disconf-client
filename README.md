@@ -1,5 +1,15 @@
 # matainable-disconf-client包
 
+## 引入方式
+
+```xml
+<dependency>
+  <groupId>com.github.zhuchao941</groupId>
+  <artifactId>maintainable-disconf-client</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
 ## 背景
 
 1. 当前很多配置都在disconf上，迁移到别的配置中心工作量较大
